@@ -1,0 +1,25 @@
+{
+  "name": "webdriverio-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
+    "gulp": "^3.9.1",
+    "gulp-webdriver": "^2.0.2",
+    "mocha": "^3.1.2",
+    "phantomjs": "^2.1.7",
+    "selenium-standalone": "^5.8.0",
+    "webdriverio": "^4.4.0"
+  },
+  "scripts": {
+    "test": "gulp test"
+  },
+  "author": "",
+  "license": "ISC"
+}
