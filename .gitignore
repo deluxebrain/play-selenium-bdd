@@ -37,4 +37,7 @@ jspm_packages
 .node_repl_history
 
 # error shots
-errorShots/
+allure-results/
+public/
+errorShots/*.png
+

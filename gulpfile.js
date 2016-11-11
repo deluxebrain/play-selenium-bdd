@@ -2,6 +2,7 @@ var path = require('path');
 var gulp = require('gulp');
 var selenium = require('selenium-standalone');
 var webdriver = require('gulp-webdriver');
+var run = require('gulp-run');
 
 gulp.task('selenium', function(done) {
       selenium.install({
@@ -21,4 +22,12 @@ gulp.task('test', ['selenium'], function() {
             .pipe(webdriver()).once('end', function() {
                   selenium.child.kill();
             });
+});
+
+gulp.task('report', function() {
+      var cmd = 'allure generate ' +
+            path.join(__dirname, './allure-results') +
+            ' -o ' +
+            path.join(__dirname, './public');
+      return run(cmd).exec();
 });
